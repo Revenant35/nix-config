@@ -18,6 +18,17 @@
     ];
   };
 
+  # Enable fish shell
+  programs.fish = {
+    enable = true;
+    interactiveShellInit = ''
+      starship init fish | source
+    '';
+  };
+
+  # Set fish as default shell for user
+  users.users.zachbrown.shell = pkgs.fish;
+
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
 }
