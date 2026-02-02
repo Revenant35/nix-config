@@ -13,9 +13,14 @@
       "fastfetch"
       "starship"
       "zoxide"
+      # "spotify_player"
     ];
     casks = [
       "ghostty"
+      "obsidian"
+      "spotify"
+      "brave-browser"
+      "claude-code"
     ];
   };
 
@@ -28,7 +33,7 @@
     interactiveShellInit = ''
       starship init fish | source
       zoxide init fish | source
-      alias drs="darwin-rebuild switch"
+      alias drs="sudo darwin-rebuild switch"
     '';
   };
 
