@@ -11,6 +11,10 @@
     enable = true;
     brews = [
       "fastfetch"
+      "starship"
+    ];
+    casks = [
+      "ghostty"
     ];
   };
 

@@ -14,7 +14,6 @@
     darwinConfigurations."Zachs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [
         ./modules/shared.nix
-        ./modules/ghostty.nix
         {
           system.configurationRevision = self.rev or self.dirtyRev or null;
           system.stateVersion = 6;
