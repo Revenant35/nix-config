@@ -12,23 +12,24 @@
   environment.systemPackages = [
     pkgs.vim
     pkgs.jetbrains-toolbox
+    pkgs.fastfetch
+    pkgs.starship
+    pkgs.zoxide
+    pkgs.obsidian
+    pkgs.spotify
+    pkgs.brave
+    pkgs.claude-code
   ];
 
   # Homebrew packages
   homebrew = {
     enable = true;
     brews = [
-      "fastfetch"
-      "starship"
-      "zoxide"
       # "spotify_player"
     ];
     casks = [
       "ghostty"
-      "obsidian"
-      "spotify"
-      "brave-browser"
-      "claude-code"
+      #"brave-browser"
     ];
     onActivation.cleanup = "zap";
   };
@@ -36,9 +37,6 @@
   # Enable fish shell
   programs.fish = {
     enable = true;
-    loginShellInit = ''
-      fish_add_path /opt/homebrew/bin
-    '';
     interactiveShellInit = ''
       starship init fish | source
       zoxide init fish | source
