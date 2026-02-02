@@ -6,9 +6,12 @@
     pkgs.nerd-fonts.jetbrains-mono
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   # Packages shared across all systems
   environment.systemPackages = [
     pkgs.vim
+    pkgs.jetbrains-toolbox
   ];
 
   # Homebrew packages
@@ -27,6 +30,7 @@
       "brave-browser"
       "claude-code"
     ];
+    onActivation.cleanup = "zap";
   };
 
   # Enable fish shell
