@@ -22,6 +22,7 @@
     pkgs.claude-code
     pkgs.android-tools
     pkgs.javaPackages.compiler.temurin-bin.jdk-25
+    pkgs.stow
   ];
 
   # Homebrew packages
