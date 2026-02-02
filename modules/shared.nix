@@ -12,6 +12,7 @@
     brews = [
       "fastfetch"
       "starship"
+      "zoxide"
     ];
     casks = [
       "ghostty"
@@ -26,6 +27,7 @@
     '';
     interactiveShellInit = ''
       starship init fish | source
+      alias drs="darwin-rebuild switch"
     '';
   };
 
