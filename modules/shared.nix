@@ -27,6 +27,7 @@
     '';
     interactiveShellInit = ''
       starship init fish | source
+      zoxide init fish | source
       alias drs="darwin-rebuild switch"
     '';
   };
