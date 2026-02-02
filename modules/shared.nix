@@ -18,7 +18,10 @@
     pkgs.obsidian
     pkgs.spotify
     pkgs.brave
+    pkgs.lazygit
     pkgs.claude-code
+    pkgs.android-tools
+    pkgs.javaPackages.compiler.temurin-bin.jdk-25
   ];
 
   # Homebrew packages
@@ -39,6 +42,7 @@
     enable = true;
     interactiveShellInit = ''
       starship init fish | source
+      enable_transience
       zoxide init fish | source
       alias drs="sudo darwin-rebuild switch"
     '';
