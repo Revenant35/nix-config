@@ -21,6 +21,9 @@
   # Enable fish shell
   programs.fish = {
     enable = true;
+    loginShellInit = ''
+      fish_add_path /opt/homebrew/bin
+    '';
     interactiveShellInit = ''
       starship init fish | source
     '';
