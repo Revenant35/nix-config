@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  # Fonts
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+  ];
+
   # Packages shared across all systems
   environment.systemPackages = [
     pkgs.vim
