@@ -23,6 +23,9 @@
     pkgs.android-tools
     pkgs.javaPackages.compiler.temurin-bin.jdk-25
     pkgs.stow
+    pkgs.fzf
+    pkgs.bat
+    pkgs.eza
   ];
 
   # Homebrew packages
@@ -33,7 +36,6 @@
     ];
     casks = [
       "ghostty"
-      #"brave-browser"
     ];
     onActivation.cleanup = "zap";
   };
@@ -41,13 +43,6 @@
   # Enable fish shell
   programs.fish = {
     enable = true;
-    interactiveShellInit = ''
-      starship init fish | source
-      enable_transience
-      zoxide init fish | source
-      alias drs="sudo darwin-rebuild switch"
-      export XDG_CONFIG_HOME="$HOME/.config"
-    '';
   };
 
   # Set fish as default shell for user
