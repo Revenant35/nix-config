@@ -26,6 +26,9 @@
     pkgs.fzf
     pkgs.bat
     pkgs.eza
+    pkgs.dotnetCorePackages.sdk_8_0_1xx-bin
+    pkgs.vscode
+    pkgs.pay-respects
   ];
 
   # Homebrew packages
