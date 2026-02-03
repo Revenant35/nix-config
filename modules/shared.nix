@@ -46,6 +46,7 @@
       enable_transience
       zoxide init fish | source
       alias drs="sudo darwin-rebuild switch"
+      export XDG_CONFIG_HOME="$HOME/.config"
     '';
   };
 
