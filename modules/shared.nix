@@ -28,6 +28,8 @@
     pkgs.eza
     pkgs.dotnetCorePackages.sdk_8_0_1xx-bin
     pkgs.vscode
+    pkgs.delta
+    pkgs.tldr
   ];
 
   # Homebrew packages
