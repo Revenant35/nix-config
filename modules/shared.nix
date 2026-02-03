@@ -28,13 +28,13 @@
     pkgs.eza
     pkgs.dotnetCorePackages.sdk_8_0_1xx-bin
     pkgs.vscode
-    pkgs.pay-respects
   ];
 
   # Homebrew packages
   homebrew = {
     enable = true;
     brews = [
+      "thefuck"
       # "spotify_player"
     ];
     casks = [
