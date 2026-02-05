@@ -30,6 +30,8 @@
     pkgs.vscode
     pkgs.delta
     pkgs.tldr
+    pkgs.nodejs
+    pkgs.ruby
   ];
 
   # Homebrew packages
