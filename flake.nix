@@ -14,6 +14,7 @@
     darwinConfigurations."Zachs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
       modules = [
         ./modules/shared.nix
+        ./modules/personal.nix
         {
           system.configurationRevision = self.rev or self.dirtyRev or null;
           system.stateVersion = 6;
@@ -26,6 +27,7 @@
     darwinConfigurations."VU-D4RW65L6QG" = nix-darwin.lib.darwinSystem {
       modules = [
         ./modules/shared.nix
+        ./modules/vu.nix
         {
           system.configurationRevision = self.rev or self.dirtyRev or null;
           system.stateVersion = 6;

@@ -17,7 +17,6 @@
     pkgs.zoxide
     pkgs.obsidian
     pkgs.spotify
-    pkgs.brave
     pkgs.lazygit
     pkgs.claude-code
     pkgs.android-tools
@@ -30,7 +29,6 @@
     pkgs.vscode
     pkgs.delta
     pkgs.tldr
-    pkgs.nodejs
     pkgs.ruby
   ];
 
