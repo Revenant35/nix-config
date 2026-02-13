@@ -25,7 +25,6 @@
     pkgs.fzf
     pkgs.bat
     pkgs.eza
-    pkgs.dotnetCorePackages.sdk_8_0_1xx-bin
     pkgs.vscode
     pkgs.delta
     pkgs.tldr
@@ -37,10 +36,10 @@
     enable = true;
     brews = [
       "thefuck"
-      # "spotify_player"
     ];
     casks = [
       "ghostty"
+      "zen"
     ];
     onActivation.cleanup = "zap";
   };
