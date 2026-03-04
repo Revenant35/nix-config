@@ -18,11 +18,6 @@
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
     let
       systems = {
-        work = {
-          hostname = "VU-D4RW65L6QG";
-          system = "aarch64-darwin";
-          username = "zacharyc.brown";
-        };
         personal = {
           hostname = "Zachs-MacBook-Pro";
           system = "aarch64-darwin";
@@ -51,12 +46,10 @@
     in
     {
       darwinConfigurations = {
-        "VU-D4RW65L6QG" = mkDarwinConfiguration systems.work;
         "Zachs-MacBook-Pro" = mkDarwinConfiguration systems.personal;
       };
 
       homeConfigurations = {
-        "zacharyc.brown" = mkHomeConfiguration systems.work;
         "zachbrown" = mkHomeConfiguration systems.personal;
       };
     };

@@ -16,13 +16,9 @@ This setup uses **Nix flakes** for reproducibility and **standalone home-manager
 ├── flake.nix                 # Flake entry point
 ├── flake.lock                # Locked dependencies
 ├── hosts/
-│   ├── vu-d4rw65l6qg/        # Work laptop (darwin config)
-│   │   └── default.nix
 │   └── zachs-macbook-pro/    # Personal laptop (darwin config)
 │       └── default.nix
 ├── home/
-│   ├── zacharyc.brown/       # Work user (home-manager config)
-│   │   └── default.nix
 │   └── zachbrown/            # Personal user (home-manager config)
 │       └── default.nix
 ├── modules/
@@ -39,7 +35,6 @@ This setup uses **Nix flakes** for reproducibility and **standalone home-manager
 
 | Hostname | Type | Architecture | Username | Purpose |
 |----------|------|--------------|----------|---------|
-| VU-D4RW65L6QG | MacBook | Apple M4 (aarch64-darwin) | zacharyc.brown | Work |
 | Zachs-MacBook-Pro | MacBook | Apple M3 (aarch64-darwin) | zachbrown | Personal |
 
 ## Conventions
@@ -80,20 +75,12 @@ This setup uses **Nix flakes** for reproducibility and **standalone home-manager
 ### Rebuild System Configuration (nix-darwin)
 
 ```bash
-# Work laptop
-darwin-rebuild switch --flake .#VU-D4RW65L6QG
-
-# Personal laptop
 darwin-rebuild switch --flake .#Zachs-MacBook-Pro
 ```
 
 ### Rebuild User Configuration (home-manager)
 
 ```bash
-# Work user
-home-manager switch --flake .#zacharyc.brown
-
-# Personal user
 home-manager switch --flake .#zachbrown
 ```
 

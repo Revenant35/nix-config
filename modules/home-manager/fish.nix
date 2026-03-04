@@ -13,9 +13,6 @@
     };
 
     interactiveShellInit = ''
-      # Starship transient prompt
-      enable_transience
-
       # Run fastfetch on shell startup
       fastfetch
     '';
