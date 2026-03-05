@@ -8,7 +8,7 @@
       command = ${lib.getExe pkgs.fish}
       background-opacity = 0.85
       theme = tokyo-night-moon
-      font-family = JetBrains Mono
+      font-family = JetBrainsMono Nerd Font Mono
     '';
 
     "ghostty/themes".source = ./ghostty/themes;

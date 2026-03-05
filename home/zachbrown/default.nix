@@ -31,7 +31,8 @@
       tree
       htop
 
-      # Add more packages here
+      # Fonts
+      nerd-fonts.jetbrains-mono
     ];
 
     # Environment variables
@@ -42,6 +43,9 @@
     # Home state version - do not change after initial setup
     stateVersion = "24.05";
   };
+
+  # Font configuration (ensures fonts are discoverable on Linux)
+  fonts.fontconfig.enable = true;
 
   # Let home-manager manage itself
   programs.home-manager.enable = true;
