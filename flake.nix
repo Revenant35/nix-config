@@ -1,5 +1,5 @@
 {
-  description = "Nix configuration for macOS machines";
+  description = "Nix configuration for personal machines";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -13,6 +13,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, ... }:
@@ -21,6 +25,11 @@
         personal = {
           hostname = "Zachs-MacBook-Pro";
           system = "aarch64-darwin";
+          username = "zachbrown";
+        };
+        linux-desktop = {
+          hostname = "fedora";
+          system = "x86_64-linux";
           username = "zachbrown";
         };
       };
@@ -40,6 +49,7 @@
         };
         extraSpecialArgs = { inherit inputs username; };
         modules = [
+          inputs.zen-browser.homeModules.default
           ./home/${username}
         ];
       };
@@ -50,7 +60,8 @@
       };
 
       homeConfigurations = {
-        "zachbrown" = mkHomeConfiguration systems.personal;
+        "zachbrown@Zachs-MacBook-Pro" = mkHomeConfiguration systems.personal;
+        "zachbrown@fedora" = mkHomeConfiguration systems.linux-desktop;
       };
     };
 }

@@ -13,13 +13,14 @@
     ../../modules/home-manager/lazygit.nix
     ../../modules/home-manager/starship.nix
     ../../modules/home-manager/tldr.nix
+    ../../modules/home-manager/zen-browser.nix
     ../../modules/home-manager/zoxide.nix
   ];
 
   # Home-manager settings
   home = {
     username = username;
-    homeDirectory = "/Users/${username}";
+    homeDirectory = if pkgs.stdenv.isDarwin then "/Users/${username}" else "/home/${username}";
 
     # User packages
     packages = with pkgs; [

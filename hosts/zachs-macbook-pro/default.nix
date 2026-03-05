@@ -8,7 +8,7 @@
     ../../modules/darwin/obsidian.nix
     ../../modules/darwin/spotify.nix
     ../../modules/darwin/system-preferences.nix
-    ../../modules/darwin/zen-browser.nix
+
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
