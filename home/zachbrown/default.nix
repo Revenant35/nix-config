@@ -30,6 +30,7 @@
       jq
       tree
       htop
+      nodejs
 
       # Fonts
       nerd-fonts.jetbrains-mono
