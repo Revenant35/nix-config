@@ -9,6 +9,7 @@
       cd = "z";
       ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";
       cat = "bat";
+      nx = "npx nx";
     } // lib.optionalAttrs pkgs.stdenv.isDarwin {
       drs = "darwin-rebuild switch --flake ~/nix";
     };

@@ -32,6 +32,10 @@
       htop
       nodejs
 
+      # Node.js
+      nodejs
+      nodePackages.pnpm
+
       # Fonts
       nerd-fonts.jetbrains-mono
     ];
